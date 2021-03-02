@@ -27,6 +27,8 @@ shopt -s checkwinsize
 # auto-complete commands from history
 INPUTRC=~/.inputrc
 
+# set pager to use most
+export PAGER="most"
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
