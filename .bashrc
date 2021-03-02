@@ -100,7 +100,7 @@ if ! shopt -oq posix; then
 fi
 
 # show contents of directory after changing to it
-function cd () {
+function cdl () {
      command cd "$1"
      ls
 }
