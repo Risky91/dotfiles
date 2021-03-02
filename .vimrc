@@ -15,11 +15,13 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'raimondi/delimitmate'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-fugitive'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'sjl/badwolf'
 call plug#end()
 
 syntax enable
 filetype plugin indent on
-colorscheme elflord
+colorscheme badwolf 
 
 set tabstop=4
 set softtabstop=4
