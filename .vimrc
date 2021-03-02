@@ -57,6 +57,10 @@ nnoremap <space> <nop>
 nnoremap j gj
 nnoremap k gk
 
+" Open line without entering insert mode
+nnoremap <leader>o o<esc>
+nnoremap <leader>O O<esc>
+
 " ESC remap
 inoremap jk <esc>
 inoremap kj <esc>
