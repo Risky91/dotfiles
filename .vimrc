@@ -15,7 +15,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'raimondi/delimitmate'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-fugitive'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'sjl/badwolf'
 call plug#end()
 
@@ -68,7 +67,7 @@ inoremap jk <esc>
 inoremap kj <esc>
 
 " Window remaps
-nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>\| <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-l> <C-w>l
