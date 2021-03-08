@@ -29,6 +29,7 @@ INPUTRC=~/.inputrc
 
 # set pager to use most
 export PAGER="most"
+
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
@@ -100,6 +101,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+function nonzero_return() {
+	RETVAL=$?
+	[ $RETVAL -ne 0 ] && echo " [$RETVAL]"
+}
+
+export PS1="\[\e[01;32m\]\u\[\e[m\]\[\e\]@\[\e[m\]\[\e[01;32m\]\h\[\e[m\]:\[\e[01;34m\]\W\[\e[m\]\\$\[\e[01;31m\]\`nonzero_return\`\[\e[m\] "
 
 # show contents of directory after changing to it
 function cdl () {

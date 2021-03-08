@@ -14,7 +14,7 @@ alias egrep="egrep --color=auto"
 alias vgrep="vgrep --color=auto"
 
 alias rmi="rm -i"
-alias cp="cp -rv"
+#alias cp="cp -rv"
 alias mv="mv -v"
 
 alias mkdir="mkdir -pv"
@@ -29,4 +29,4 @@ alias sudo="sudo "
 alias ga="git add"
 alias gcm="git commit -m"
 alias gb="git branch"
-
+alias gs="git status"

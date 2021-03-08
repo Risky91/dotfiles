@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-endwise'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -16,11 +15,14 @@ Plug 'raimondi/delimitmate'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-fugitive'
 Plug 'sjl/badwolf'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
-syntax enable
 filetype plugin indent on
+syntax enable
 colorscheme badwolf 
+
+set laststatus=2
 
 set tabstop=4
 set softtabstop=4
@@ -80,11 +82,8 @@ nnoremap <leader>w :tabclose<CR>
 " FZF remaps
 nnoremap <leader>p :FZF<CR>
 
-"Airline
-let g:airline#extensions#ale#enabled=1
-
 " NerdTree remaps
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 
 let NERDTreeAutoDeleteBuffer = 1
@@ -103,6 +102,10 @@ augroup nerdtree
         autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
             \ quit | endif
 augroup END
+
+"Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " ALE
 let g:ale_lint_on_text_changed=0
