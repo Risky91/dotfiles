@@ -11,16 +11,18 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'raimondi/delimitmate'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-fugitive'
 Plug 'sjl/badwolf'
 Plug 'vim-airline/vim-airline'
+Plug 'honza/vim-snippets'
+Plug 'lervag/vimtex'
 call plug#end()
 
 filetype plugin indent on
 syntax enable
 colorscheme badwolf 
+set encoding=utf8
 
 set laststatus=2
 
@@ -115,6 +117,10 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'ruby': ['rubocop'],
 \}
+
+if empty(v:servername) && exists('*remote_startserver')
+      call remote_startserver('VIM')
+    endif
 
 nnoremap <leader>aj :ALENextWrap<CR>
 nnoremap <leader>ak :ALEPreviousWrap<CR>
