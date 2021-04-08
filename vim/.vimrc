@@ -19,6 +19,7 @@ Plug 'honza/vim-snippets'
 Plug 'lervag/vimtex'
 call plug#end()
 
+set nocompatible
 filetype plugin indent on
 syntax enable
 colorscheme badwolf 
