@@ -115,8 +115,7 @@ function nonzero_return() {
 
 # show contents of directory after changing to it
 function cl () {
-     cd "$1"
-     ls
+     cd "$1" && ls
 }
 
 qrcode () {
