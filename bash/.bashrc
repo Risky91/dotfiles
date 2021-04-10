@@ -24,6 +24,9 @@ HISTFILESIZE=20000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# help with typos
+shopt -s cdspell
+
 # auto-complete commands from history
 INPUTRC=~/.inputrc
 
