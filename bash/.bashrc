@@ -105,18 +105,21 @@ if ! shopt -oq posix; then
   fi
 fi
 
+##### FUNCTIONS #####
+
+# add exit code to prompt if nonzero
 function nonzero_return() {
 	RETVAL=$?
 	[ $RETVAL -ne 0 ] && echo " [$RETVAL]"
 }
-
-export PS1="\[\e[01;32m\]\u\[\e[m\]\[\e\]@\[\e[m\]\[\e[01;32m\]\h\[\e[m\]:\[\e[01;34m\]\W\[\e[m\]\\$\[\e[01;31m\]\`nonzero_return\`\[\e[m\] "
 
 # show contents of directory after changing to it
 function cdl () {
      command cd "$1"
      ls
 }
+
+export PS1="\[\e[01;32m\]\u\[\e[m\]\[\e\]@\[\e[m\]\[\e[01;32m\]\h\[\e[m\]:\[\e[01;34m\]\W\[\e[m\]\\$\[\e[01;31m\]\`nonzero_return\`\[\e[m\] "
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
