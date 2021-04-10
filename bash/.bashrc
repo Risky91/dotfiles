@@ -109,14 +109,18 @@ fi
 
 # add exit code to prompt if nonzero
 function nonzero_return() {
-	RETVAL=$?
-	[ $RETVAL -ne 0 ] && echo " [$RETVAL]"
+     RETVAL=$?
+     [ $RETVAL -ne 0 ] && echo " [$RETVAL]"
 }
 
 # show contents of directory after changing to it
 function cl () {
      cd "$1"
      ls
+}
+
+qrcode () {
+     printf "$@" | curl -F-=\<- qrenco.de
 }
 
 export PS1="\[\e[01;32m\]\u\[\e[m\]\[\e\]@\[\e[m\]\[\e[01;32m\]\h\[\e[m\]:\[\e[01;34m\]\W\[\e[m\]\\$\[\e[01;31m\]\`nonzero_return\`\[\e[m\] "
