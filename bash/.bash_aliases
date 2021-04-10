@@ -20,14 +20,14 @@ alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias vgrep="vgrep --color=auto"
 
-# add error protection to rm
-alias rm="rm -I"
+# add error protection to rm, verbose, recursive
+alias rm="rm -rvi"
 
 # copy recursively if directory, verbose
-alias cp="cp -rv"
+alias cp="cp -riv"
 
 # verbose move
-alias mv="mv -v" 
+alias mv="mv -iv" 
 
 # automatically create parents, verbose
 alias mkdir="mkdir -pv"
@@ -38,7 +38,9 @@ alias wget="wget -c"
 # quick clear (needed? C-L?)
 alias c="clear"
 
+# sudo aliases
 alias sudo="sudo "
+alias please="sudo !!"
 
 # add executable
 alias chx="chmod +x"
