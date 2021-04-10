@@ -11,7 +11,7 @@ alias vdir="vdir --color=auto"
 
 # easier directory traversal
 alias ..="cd .."
-alias -="cd -"
+#alias -="cd -"
 alias home="cd ~"
 alias root="cd /"
 
