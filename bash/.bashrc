@@ -114,8 +114,8 @@ function nonzero_return() {
 }
 
 # show contents of directory after changing to it
-function cdl () {
-     command cd "$1"
+function cl () {
+     cd "$1"
      ls
 }
 
