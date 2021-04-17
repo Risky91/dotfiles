@@ -21,7 +21,7 @@ alias egrep="egrep --color=auto"
 alias vgrep="vgrep --color=auto"
 
 # add error protection to rm, verbose, recursive
-alias rm="rm -rvi"
+alias rm="rm -rvI"
 
 # copy recursively if directory, verbose
 alias cp="cp -riv"
@@ -40,11 +40,13 @@ alias c="clear"
 
 # sudo aliases
 alias sudo="sudo "
-alias please="sudo !!"
+alias please='sudo $(fc -ln -1)'
 
 # add executable
 alias chx="chmod +x"
 
+# use htop instead of top
+alias top="htop"
 # git aliases
 alias ga="git add"
 alias gcm="git commit -m"
