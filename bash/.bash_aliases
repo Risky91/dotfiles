@@ -47,6 +47,10 @@ alias chx="chmod +x"
 
 # use htop instead of top
 alias top="htop"
+
+# use ncdu instead of du
+alias du="ncdu"
+
 # git aliases
 alias ga="git add"
 alias gcm="git commit -m"
