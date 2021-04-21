@@ -11,6 +11,7 @@ alias vdir="vdir --color=auto"
 
 # easier directory traversal
 alias ..="cd .."
+
 #alias -="cd -"
 alias home="cd ~"
 alias root="cd /"
@@ -56,3 +57,7 @@ alias ga="git add"
 alias gcm="git commit -m"
 alias gb="git branch"
 alias gs="git status"
+
+# weather
+alias weather="curl wttr.in"
+alias weatherex="curl v2.wttr.in"
