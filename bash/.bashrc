@@ -118,7 +118,11 @@ function cl () {
      cd "$1" && ls
 }
 
-qrcode () {
+function ca () {
+        cd "$1" && ls -a
+}
+
+function qrcode () {
      printf "$@" | curl -F-=\<- qrenco.de
 }
 
