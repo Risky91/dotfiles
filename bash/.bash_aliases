@@ -64,3 +64,6 @@ alias weatherex="curl v2.wttr.in"
 
 # googler
 alias google="googler"
+
+#calcurses
+alias calendar="calcurse"
