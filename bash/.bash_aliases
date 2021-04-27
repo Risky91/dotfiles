@@ -61,3 +61,6 @@ alias gs="git status"
 # weather
 alias weather="curl wttr.in"
 alias weatherex="curl v2.wttr.in"
+
+# googler
+alias google="googler"
