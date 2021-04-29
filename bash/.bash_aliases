@@ -67,3 +67,6 @@ alias google="googler"
 
 #calcurses
 alias calendar="calcurse"
+
+#wikit
+alias wiki="wikit"
