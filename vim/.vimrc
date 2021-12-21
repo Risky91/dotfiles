@@ -6,17 +6,10 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-endwise'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'w0rp/ale'
-Plug 'tpope/vim-fugitive'
 Plug 'sjl/badwolf'
 Plug 'vim-airline/vim-airline'
-Plug 'honza/vim-snippets'
-Plug 'lervag/vimtex'
 call plug#end()
 
 set nocompatible
