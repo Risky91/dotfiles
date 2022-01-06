@@ -103,21 +103,10 @@ augroup END
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-" ALE
-let g:ale_lint_on_text_changed=0
-let g:ale_lint_on_save=1
-
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'ruby': ['rubocop'],
-\}
-
-if empty(v:servername) && exists('*remote_startserver')
-      call remote_startserver('VIM')
+" Protect against nvim issues
+if !has('nvim')
+        set ttymouse=xterm2
     endif
-
-nnoremap <leader>aj :ALENextWrap<CR>
-nnoremap <leader>ak :ALEPreviousWrap<CR>
 
 " Functions
 function! <SID>StripTrailingWhitespaces()

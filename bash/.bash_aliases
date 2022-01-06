@@ -70,3 +70,6 @@ alias calendar="calcurse"
 
 #wikit
 alias wiki="wikit"
+
+#replace vim with nvim
+alias vim="nvim"
